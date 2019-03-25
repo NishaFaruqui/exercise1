@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise 2</title>
+</head>
+<body>
+
+<p id="output"></p>
+<p id="vote"></p>
+
+<script>
+
+
+function Person(name, age) {
+	this.name = name;
+    this.age = age;
+
+    this.describe = function() {
+   return this.name + ", " + this.age + " years old";
+    }
+}
+
+var nameee = prompt("What is your name?");
+
+while (nameee == "")
+{
+  alert("Oops you have not entered a name!");
+  nameee = prompt("What is your name?");
+}
+
+var ageee = prompt("How old are you?");
+
+while (isNaN(ageee) || ageee == "")
+{
+  alert("You must enter a valid number");
+  ageee = prompt("How old are you?");
+}
+
+if (ageee >= 18)
+{
+document.getElementById("vote").innerHTML = "Eligible to vote in the US";
+}
+else
+document.getElementById("vote").innerHTML = "Not eligible to vote in the US";
+
+
+var myPerson = new Person(nameee, ageee);
+
+document.getElementById("output").innerHTML = myPerson.describe();
+
+</script>
+
+</body>
+</html>

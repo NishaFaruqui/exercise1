@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculation - Exercise 1</title>
+
+</head>
+
+<body>
+
+<p id="number"></p>
+
+<script>
+
+var cookies = prompt("How many cookies are in the jar?");
+
+function multiplyFive(cookies) {
+	return cookies * 5;
+}
+
+//var answer = multiplyFive(cookies);
+
+document.getElementById("number").innerHTML = "There are actually " + multiplyFive(cookies) + " cookies in the cookie jar!";
+
+
+</script>
+</body>
+</html>

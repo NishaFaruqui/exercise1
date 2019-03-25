@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<title>Exercise 3</title>
+<body>
+
+<p id="name"></p>
+<p id="info"></p>
+
+<script>
+
+var fullName = {
+  firstName: "Nisha",
+  lastName: "Faruqui",
+  printFullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+var print = fullName.printFullName;
+
+var boundPrintFullName = print.bind(fullName);
+
+document.getElementById("name").innerHTML = boundPrintFullName();
+
+var details = {
+   astrology: "taurus",
+   age: 25,
+   favColor: "red",
+   background: "asian",
+   printDetails: function() {
+   return "<strong>Astrological Sign: </strong>" + this.astrology + " <br/><strong>Age: </strong>" + this.age + "<br/><strong> Fav Color:</strong> " + this.favColor + " <br/><strong>Background: </strong>" + this.background;
+   }
+};
+
+var print2 = details.printDetails;
+
+var boundPrintDetails = print2.bind(details);
+
+document.getElementById("info").innerHTML = boundPrintDetails();
+
+</script>
+
+</body>
+</html>
